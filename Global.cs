@@ -17,5 +17,9 @@ namespace SisalBet
         public static CookieContainer cookieContainer = null;
         public static string GTM = "";
         public static RunScript RunScriptCode = null;
+
+
     }
+
+
 }
