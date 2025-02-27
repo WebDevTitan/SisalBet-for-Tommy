@@ -165,7 +165,7 @@ namespace SisalBet
                 Setting.Instance.EventIdsResult = extractedList;
                 Global.WrittingLog("total" + extractedList.Count.ToString() + "scanned");
                 string jsonOutput = JsonConvert.SerializeObject(extractedList, Formatting.Indented);
-                File.WriteAllText("output.json", jsonOutput);
+                File.WriteAllText("output.txt", jsonOutput);
 
             }
             catch(Exception ex)

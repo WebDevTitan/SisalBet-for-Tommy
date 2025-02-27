@@ -144,8 +144,7 @@
             this.groupBox7.Size = new System.Drawing.Size(882, 81);
             this.groupBox7.TabIndex = 49;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Match5 Setting";
-            this.groupBox7.Enter += new System.EventHandler(this.groupBox7_Enter);
+            this.groupBox7.Text = "Match5 Setting";            
             // 
             // txtOutcome5
             // 
@@ -241,7 +240,6 @@
             this.groupBox6.TabIndex = 49;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Match4 Setting";
-            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // txtOutcome4
             // 
@@ -337,7 +335,6 @@
             this.groupBox5.TabIndex = 48;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Match3 Setting";
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // txtOutcome3
             // 
@@ -432,7 +429,6 @@
             this.groupBox4.TabIndex = 48;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Match2 Setting";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // txtOutcome2
             // 
@@ -527,7 +523,6 @@
             this.groupBox3.TabIndex = 47;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Match1 Setting";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // txtOutcome1
             // 
@@ -617,7 +612,6 @@
             this.qwe.Size = new System.Drawing.Size(87, 21);
             this.qwe.TabIndex = 18;
             this.qwe.Text = "Password";
-            this.qwe.Click += new System.EventHandler(this.qwe_Click);
             // 
             // label11
             // 
@@ -629,7 +623,6 @@
             this.label11.Size = new System.Drawing.Size(90, 21);
             this.label11.TabIndex = 17;
             this.label11.Text = "Username";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // txtUsername
             // 
@@ -638,7 +631,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(239, 26);
             this.txtUsername.TabIndex = 16;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPassword
             // 
@@ -647,7 +639,6 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(239, 26);
             this.txtPassword.TabIndex = 15;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // btnSave
             // 
@@ -672,7 +663,6 @@
             this.ad.Size = new System.Drawing.Size(64, 21);
             this.ad.TabIndex = 13;
             this.ad.Text = "Stake:";
-            this.ad.Click += new System.EventHandler(this.ad_Click);
             // 
             // txtStake
             // 
@@ -681,7 +671,6 @@
             this.txtStake.Name = "txtStake";
             this.txtStake.Size = new System.Drawing.Size(151, 26);
             this.txtStake.TabIndex = 11;
-            this.txtStake.TextChanged += new System.EventHandler(this.txtStake_TextChanged);
             // 
             // Main
             // 

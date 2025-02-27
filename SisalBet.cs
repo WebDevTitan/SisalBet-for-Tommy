@@ -23,8 +23,8 @@ namespace SisalBet
         private HttpClient httpClient = null;
         private CookieContainer coockieContainer = null;
         private string domain = "www.sisal.it";
-        public List<CombinationBodyarray> CombinationList= new List<CombinationBodyarray>();
-        
+        public List<CombinationBodyarray> CombinationList = new List<CombinationBodyarray>();
+
 
         public SisalBet()
         {
@@ -58,7 +58,7 @@ namespace SisalBet
             return httpClient;
         }
 
-        
+
         public string getProxyLocation()
         {
             try
@@ -79,14 +79,14 @@ namespace SisalBet
 
         public bool login()
         {
-            Thread.Sleep(7000);            
-            
-           //AutoItX.MouseClick("LEFT", 536, 365, 1, 0);
+            Thread.Sleep(7000);
+
+            //AutoItX.MouseClick("LEFT", 536, 365, 1, 0);
             Global.WrittingLog("Login started.");
             bool isloggedin = false;
             try
-            {              
-               
+            {
+
                 int retryCount = 2;
                 //while (retryCount-- > 0)
                 //{
@@ -172,7 +172,7 @@ namespace SisalBet
         {
             CombinationList = new List<CombinationBodyarray>();
             try
-            { 
+            {
                 //Match1 
                 if (Setting.Instance.Sport1 == "Soccer" && Setting.Instance.Outcome1 == "Soccer/1stHalf/Even/Odd/Corner")
                 {
@@ -187,7 +187,7 @@ namespace SisalBet
                 else if (Setting.Instance.Sport1 == "Soccer" && Setting.Instance.Outcome1 == "Soccer/Even/Odd/Final")
                 {
                     Setting.Instance.marketTypeId1 = "19";
-                    Setting.Instance.marketAttributeId1= "0";
+                    Setting.Instance.marketAttributeId1 = "0";
                 }
                 else if (Setting.Instance.Sport1 == "Soccer" && Setting.Instance.Outcome1 == ("Soccer/Even/Odd/Corner"))
                 {
@@ -222,12 +222,12 @@ namespace SisalBet
                 else if (Setting.Instance.Sport1 == "Basketball" && Setting.Instance.Outcome1.Contains("Basketball/Under/Over/"))
                 {
                     Setting.Instance.marketTypeId1 = "14863";
-                    Setting.Instance.marketAttributeId1 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome1) * 100);
+                    Setting.Instance.marketAttributeId1 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome1) * 10);
                 }
                 else if (Setting.Instance.Sport1 == "Volleyball" && Setting.Instance.Outcome1.Contains("Volleyball/Under/Over/"))
                 {
                     Setting.Instance.marketTypeId1 = "8344";
-                    Setting.Instance.marketAttributeId1 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome1) * 100);
+                    Setting.Instance.marketAttributeId1 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome1) * 10);
                 }
                 else if (Setting.Instance.Sport1 == "PingPong" && Setting.Instance.Outcome1 == "PingPong/1/2")
                 {
@@ -283,12 +283,12 @@ namespace SisalBet
                 else if (Setting.Instance.Sport2 == "Basketball" && Setting.Instance.Outcome2.Contains("Basketball/Under/Over/"))
                 {
                     Setting.Instance.marketTypeId2 = "14863";
-                    Setting.Instance.marketAttributeId2 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome2) * 100);
+                    Setting.Instance.marketAttributeId2 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome2) * 10);
                 }
                 else if (Setting.Instance.Sport2 == "Volleyball" && Setting.Instance.Outcome2.Contains("Volleyball/Under/Over/"))
                 {
                     Setting.Instance.marketTypeId2 = "8344";
-                    Setting.Instance.marketAttributeId2 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome2) * 100);
+                    Setting.Instance.marketAttributeId2 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome2) * 10);
                 }
                 else if (Setting.Instance.Sport2 == "PingPong" && Setting.Instance.Outcome2 == "PingPong/1/2")
                 {
@@ -344,12 +344,12 @@ namespace SisalBet
                 else if (Setting.Instance.Sport3 == "Basketball" && Setting.Instance.Outcome3.Contains("Basketball/Under/Over/"))
                 {
                     Setting.Instance.marketTypeId3 = "14863";
-                    Setting.Instance.marketAttributeId3 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome3) * 100);
+                    Setting.Instance.marketAttributeId3 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome3) * 10);
                 }
                 else if (Setting.Instance.Sport3 == "Volleyball" && Setting.Instance.Outcome3.Contains("Volleyball/Under/Over/"))
                 {
                     Setting.Instance.marketTypeId3 = "8344";
-                    Setting.Instance.marketAttributeId3 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome3) * 100);
+                    Setting.Instance.marketAttributeId3 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome3) * 10);
                 }
                 else if (Setting.Instance.Sport3 == "PingPong" && Setting.Instance.Outcome3 == "PingPong/1/2")
                 {
@@ -406,12 +406,12 @@ namespace SisalBet
                 else if (Setting.Instance.Sport4 == "Basketball" && Setting.Instance.Outcome4.Contains("Basketball/Under/Over/"))
                 {
                     Setting.Instance.marketTypeId4 = "14863";
-                    Setting.Instance.marketAttributeId4 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome4) * 100);
+                    Setting.Instance.marketAttributeId4 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome4) * 10);
                 }
                 else if (Setting.Instance.Sport4 == "Volleyball" && Setting.Instance.Outcome4.Contains("Volleyball/Under/Over/"))
                 {
                     Setting.Instance.marketTypeId4 = "8344";
-                    Setting.Instance.marketAttributeId4 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome4) * 100);
+                    Setting.Instance.marketAttributeId4 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome4) * 10);
                 }
                 else if (Setting.Instance.Sport4 == "PingPong" && Setting.Instance.Outcome4 == "PingPong/1/2")
                 {
@@ -468,12 +468,12 @@ namespace SisalBet
                 else if (Setting.Instance.Sport5 == "Basketball" && Setting.Instance.Outcome5.Contains("Basketball/Under/Over/"))
                 {
                     Setting.Instance.marketTypeId5 = "14863";
-                    Setting.Instance.marketAttributeId5 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome5) * 100);
+                    Setting.Instance.marketAttributeId5 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome5) * 10);
                 }
                 else if (Setting.Instance.Sport5 == "Volleyball" && Setting.Instance.Outcome5.Contains("Volleyball/Under/Over/"))
                 {
                     Setting.Instance.marketTypeId5 = "8344";
-                    Setting.Instance.marketAttributeId5 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome5) * 100);
+                    Setting.Instance.marketAttributeId5 = Convert.ToString(ExtractDecimalValue(Setting.Instance.Outcome5) * 10);
                 }
                 else if (Setting.Instance.Sport5 == "PingPong" && Setting.Instance.Outcome5 == "PingPong/1/2")
                 {
@@ -499,12 +499,12 @@ namespace SisalBet
                     {
                         Global.WrittingLog("EventID1 is not found. Please input matchName1 correctly.");
                     }
-                    
+
                     if (eventID2 == "-1")
                     {
                         Global.WrittingLog("EventID2 is not found. Please input matchName2 correctly.");
                     }
-                    
+
                     if (eventID3 == "-1")
                     {
                         Global.WrittingLog("EventID3 is not found. Please input matchName3 correctly.");
@@ -520,7 +520,7 @@ namespace SisalBet
                     return null;
                 }
                 //if (Setting.Instance.Sport1 == "Soccer" && Setting.Instance.Outcome1 == "1/2") { 
-                
+
                 //    int[] elements = { 1, 3 }; // Available numbers
                 //    int length = 5; // Length of each combination
 
@@ -551,7 +551,7 @@ namespace SisalBet
 
                 //} 
                 //else 
-                
+
                 int[] elements = { 1, 2 }; // Available numbers
                 int length = 5; // Length of each combination
 
@@ -579,23 +579,24 @@ namespace SisalBet
                     combinationBodyarray.BodyArray = bodyArray;
                     CombinationList.Add(combinationBodyarray);
                 }
-                
+
                 Global.WrittingLog(CombinationList.Count.ToString() + "Combinations is lodead.");
                 if (CombinationList.Count != 32)
                 {
                     Global.WrittingLog("CombinationList is less than 32");
                     return null;
-                } else if(CombinationList.Count == 0)
+                }
+                else if (CombinationList.Count == 0)
                 {
                     Global.WrittingLog("CombinationList is empty");
                     return null;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Global.WrittingLog("In setAttribute side error:" + ex.Message);
                 return null;
-            }            
+            }
             return CombinationList;
         }
 
@@ -634,8 +635,28 @@ namespace SisalBet
                 CDPController.Instance.NavigateInvoke($"https://{domain}/scommesse-matchpoint");
                 Thread.Sleep(5000);
                 foreach (var item in list)
-                {                   
-                    
+                {
+                    JObject Cookie = SaveDocumentCookie();
+                    string jwtToken = Cookie["JWT_ar"].ToString();
+                    Setting.Instance.JWTtoken = jwtToken;
+                    string token_accountCode = Cookie["login_ar"].ToString();
+                    string decodedString = Uri.UnescapeDataString(token_accountCode);
+                    var extractedValues = new Dictionary<string, string>();
+                    var keyValuePairs = decodedString.Split(';');
+
+                    foreach (var pair in keyValuePairs)
+                    {
+                        var keyValue = pair.Split('=');
+                        if (keyValue.Length == 2)
+                        {
+                            extractedValues[keyValue[0]] = keyValue[1];
+                        }
+                    }
+                    // Extract specific values based on keys
+
+                    string accontCode = extractedValues.ContainsKey("codiceConto") ? extractedValues["codiceConto"] : string.Empty;
+                    string token = extractedValues.ContainsKey("token") ? extractedValues["token"] : string.Empty;
+
                     Global.WrittingLog("Addbetslip is starting...");
                     string addBetslipURP = "https://betting.sisal.it/api/lettura-palinsesto-sport/palinsesto/common/predictions";
                     string responseData_addBet = "";
@@ -655,11 +676,11 @@ namespace SisalBet
                             ["sec-fetch-dest"] = "empty",
                             ["sec-fetch-mode"] = "cors",
                             ["sec-fetch-site"] = "same-site",
-                            ["user_data"] = "{\"accountId\":null,\"token\":null,\"tokenJWT\":null,\"locale\":\"it_IT\",\"loggedIn\":false,\"channel\":62,\"brandId\":175,\"offerId\":0}"
+                            ["user_data"] = $"{{\"accountId\":\"{accontCode}\",\"token\":\"{token}\",\"tokenJWT\":\"{jwtToken}\",\"locale\":\"it_IT\",\"loggedIn\":true,\"channel\":62,\"brandId\":175,\"offerId\":0}}"
                         },
                         ["referrer"] = $"https://{domain}/",
                         ["referrerPolicy"] = "strict-origin-when-cross-origin",
-                        ["body"] = cleanedJson,                        
+                        ["body"] = cleanedJson,
                         ["method"] = "POST",
                         ["mode"] = "cors",
                         ["credentials"] = "include"
@@ -683,27 +704,7 @@ namespace SisalBet
                         continue;
 
                     }
-                    dynamic jsonAddbet = JsonConvert.DeserializeObject<dynamic>(responseData_addBet);
-                    JObject Cookie = SaveDocumentCookie();
-                    string jwtToken = Cookie["JWT_ar"].ToString();
-                    Setting.Instance.JWTtoken = jwtToken;
-                    string token_accountCode = Cookie["login_ar"].ToString();
-                    string decodedString = Uri.UnescapeDataString(token_accountCode);
-                    var extractedValues = new Dictionary<string, string>();
-                    var keyValuePairs = decodedString.Split(';');
-
-                    foreach (var pair in keyValuePairs)
-                    {
-                        var keyValue = pair.Split('=');
-                        if (keyValue.Length == 2)
-                        {
-                            extractedValues[keyValue[0]] = keyValue[1];
-                        }
-                    }
-                    // Extract specific values based on keys
-
-                    string accontCode = extractedValues.ContainsKey("codiceConto") ? extractedValues["codiceConto"] : string.Empty;                    
-                    string token = extractedValues.ContainsKey("token") ? extractedValues["token"] : string.Empty;  
+                    dynamic jsonAddbet = JsonConvert.DeserializeObject<dynamic>(responseData_addBet);                    
                     Setting.Instance.accoutCode = accontCode;
                     Setting.Instance.token = token;
                     bool resultPlacebet = placeBet(jsonAddbet, jwtToken, accontCode, token);
@@ -778,7 +779,7 @@ namespace SisalBet
             .Select(item => Convert.ToInt64(item["odd"])) // Convert to long
             .Aggregate(1L, (x, y) => x * y);
                 double payoutAmount_double = Math.Round(result / 10000000000.0 * 1.04 * Convert.ToDouble(Setting.Instance.Stake), 2);
-                int payOutAmount = Convert.ToInt32(payoutAmount_double * 100);
+                int payOutAmount = Convert.ToInt32(payoutAmount_double * 10);
 
 
                 JObject bodyJson = new JObject
@@ -816,7 +817,7 @@ namespace SisalBet
                     }
                 }
                         },
-                        ["stakeAmount"] = Convert.ToDouble(Setting.Instance.Stake) * 100,
+                        ["stakeAmount"] = Convert.ToDouble(Setting.Instance.Stake) * 10,
                         ["payoutAmount"] = payOutAmount,
                         ["oddsChangeSetting"] = 0,
                         ["variableStakeAmount"] = 0,
@@ -863,39 +864,45 @@ namespace SisalBet
 
                 if (string.IsNullOrEmpty(responseData_PLaceBet))
                 {
-                    Global.WrittingLog("placebetStep no response");                   
+                    Global.WrittingLog("placebetStep no response");
 
                 }
                 dynamic jsonPlacebet = JsonConvert.DeserializeObject<dynamic>(responseData_PLaceBet);
                 if (jsonPlacebet["code"] == 0 && jsonPlacebet["success"] == true)
-                {                    
+                {
                     return true;
                 }
                 else if (jsonPlacebet["code"] == -1020888)
                 {
-                    Global.WrittingLog("Our oddsmakers are evaluating your play. Do not refresh the page");                    
+                    Global.WrittingLog("Our oddsmakers are evaluating your play. Do not refresh the page");
                     Setting.Instance.authrizationID = jsonPlacebet["sportAccumulatorBetslip"]["authorizationId"];
                     int i = 1;
-                    Wait:
-                    if(i == 10)
+                Wait:
+                    if (i == 10)
                     {
                         Global.WrittingLog("No wait.");
                         return false;
                     }
                     string betStatus = authorization();
-                    if(betStatus == "Accettata")
+                    if (betStatus == "Accettata")
                     {
                         return true;
-                    } else if (betStatus == "Accettazione in corso")
+                    }
+                    else if (betStatus == "Accettazione in corso")
                     {
                         Global.WrittingLog("Acceptance in progress");
                         i++;
                         Thread.Sleep(10000);
                         goto Wait;
                     }
-                    
-                } 
-                else if(jsonPlacebet["code"] == -1020889)
+
+                }
+                else if (jsonPlacebet["code"] == -103001)
+                {
+                    Global.WrittingLog("The ticket contains events that are no longer playable");
+                    return false;
+                }
+                else if (jsonPlacebet["code"] == -1020889)
                 {
                     Global.WrittingLog("Our oddsmakers did not accept your bet");
                     return false;
@@ -917,7 +924,7 @@ namespace SisalBet
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Global.WrittingLog("In placeBet side error:" + ex.Message);
             }
@@ -996,12 +1003,12 @@ namespace SisalBet
                 return code;
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Global.WrittingLog("In authorization side error:" + ex.Message);
             }
             return null;
         }
-        
+
     }
 }

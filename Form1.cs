@@ -107,11 +107,12 @@ namespace SisalBet
                                 Setting.Instance.Match5 = values[1];
                         }
                     }
-                    if (File.Exists("output.json"))
-                    {
-                        string jsonOutput = File.ReadAllText("output.json");
-                        Setting.Instance.EventIdsResult = JArray.Parse(jsonOutput);
-                    }
+                    
+                }
+                if (File.Exists("output.txt"))
+                {
+                    string jsonOutput = File.ReadAllText("output.txt");
+                    Setting.Instance.EventIdsResult = JArray.Parse(jsonOutput);
                 }
             }
             catch
@@ -177,15 +178,15 @@ namespace SisalBet
                     MessageBox.Show("Please input username");
                     return false;
                 }
-                if (string.IsNullOrEmpty(qwe.Text))
+                if (string.IsNullOrEmpty(txtPassword.Text))
                 {
-                    qwe.Focus();
+                    txtPassword.Focus();
                     MessageBox.Show("Please input password");
                     return false;
                 }
-                if (string.IsNullOrEmpty(ad.Text))
+                if (string.IsNullOrEmpty(txtStake.Text))
                 {
-                    ad.Focus();
+                    txtStake.Focus();
                     MessageBox.Show("Please input Stake");
                     return false;
                 }
@@ -395,59 +396,6 @@ namespace SisalBet
             Global.WrittingLog("Bot Stop.");
         }
 
-        private void groupBox6_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void qwe_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox7_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ad_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtStake_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
